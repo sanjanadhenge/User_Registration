@@ -10,6 +10,7 @@ namespace User_Registration
     public class Validation
     {
         public static string NAME_REGX = "^[A-Z]{1}[a-z]{2,}$";
+        public static string Mail_ID = "^[a-zA-Z]+[.+_]{1}[a-zA-Z]+[@]{1}[a-z]+[.][a-z]{2,3}([.][a-z]{2,3}){0,1}$";
         public string ValidateFirstName(string firstName)
         {
             Regex reg = new Regex(NAME_REGX);
@@ -36,5 +37,19 @@ namespace User_Registration
             }
 
         }
+        public string ValidateMailID(string mail)
+        {
+            Regex reg = new Regex(Mail_ID);
+            if (reg.IsMatch(mail))
+            {
+                return "valid";
+            }
+            else
+            {
+                return "Invalid";
+            }
+
+        }
+
     }
 }

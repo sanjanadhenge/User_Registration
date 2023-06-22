@@ -21,5 +21,13 @@ namespace TestProject1
             string result = validation.ValidateFirstName(name);
             Assert.AreEqual(result, "valid");
         }
+        [TestMethod]
+        public void GivenMail_WhenAnalyze_ShouldReturnValid()
+        {
+            string mail = "abc.xyz@brizdgelabz.co.in";
+            Validation validation = new Validation();
+            string result = validation.ValidateMailID(mail);
+            Assert.AreEqual(result, "valid");
+        }
     }
 }
