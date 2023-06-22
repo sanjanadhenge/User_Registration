@@ -45,5 +45,25 @@ namespace TestProject1
             string result = validation.ValidatePass(pass);
             Assert.AreEqual( "valid", result);
         }
+        [TestMethod]
+        public void GivenMailArray_WhenAnalyze_ShouldReturnValid()
+        {
+            string[] arr = { "abc@yahoo.com", "abc-100@yahoo.com", "abc.100@yahoo.com", "abc111@abc.com", "abc-100@abc.net", " abc.100@abc.com.au", "abc@1.com", "abc@gmail.com.com", "abc+100@gmail.com", "abc@.com.my", "abc123@gmail.a", "abc123@.com", "abc123@.com.com", ".abc@abc.com", "abc()*@gmail.com", "abc..2002@gmail.com", "abc.@gmail.com", "bc@abc@gmail.com", "abc@%*.com", "abc@gmail.com.1a", "abc@gmail.com.aa.au" };
+            Validation validation = new Validation();
+            string result = validation.ValidateMailIDArray(arr);
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (result == "valid")
+                {
+                    Assert.AreEqual("valid", result);
+                }
+                else
+                {
+                    Assert.AreEqual( "Invalid",result);
+                }
+            }
+
+
+        }
     }
 }
