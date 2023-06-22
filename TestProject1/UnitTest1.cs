@@ -37,5 +37,13 @@ namespace TestProject1
             string result = validation.ValidateMobile(mobile);
             Assert.AreEqual(result, "valid");
         }
+        [TestMethod]
+        public void GivenPassword_WhenAnalyze_ShouldReturnValid()
+        {
+            string pass = "AbcdeF2023";
+            Validation validation = new Validation();
+            string result = validation.ValidatePass(pass);
+            Assert.AreEqual(result, "valid");
+        }
     }
 }
