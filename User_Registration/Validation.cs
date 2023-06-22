@@ -23,5 +23,18 @@ namespace User_Registration
             }
 
         }
+        public string ValidateLastName(string lastName)
+        {
+            Regex reg = new Regex(NAME_REGX);
+            if (reg.IsMatch(lastName))
+            {
+                return "valid";
+            }
+            else
+            {
+                return "Invalid";
+            }
+
+        }
     }
 }

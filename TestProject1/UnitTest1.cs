@@ -13,5 +13,13 @@ namespace TestProject1
             string result = validation.ValidateFirstName(name);
             Assert.AreEqual(result, "valid");
         }
+        [TestMethod]
+        public void GivenLastName_WhenAnalyze_ShouldReturnValid()
+        {
+            string name = "Dhenge";
+            Validation validation = new Validation();
+            string result = validation.ValidateFirstName(name);
+            Assert.AreEqual(result, "valid");
+        }
     }
 }
