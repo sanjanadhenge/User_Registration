@@ -19,7 +19,7 @@ namespace TestProject1
             string name = "Dhenge";
             Validation validation = new Validation();
             string result = validation.ValidateFirstName(name);
-            Assert.AreEqual(result, "valid");
+            Assert.AreEqual("valid", result);
         }
         [TestMethod]
         public void GivenMail_WhenAnalyze_ShouldReturnValid()
@@ -27,7 +27,7 @@ namespace TestProject1
             string mail = "abc.xyz@brizdgelabz.co.in";
             Validation validation = new Validation();
             string result = validation.ValidateMailID(mail);
-            Assert.AreEqual(result, "valid");
+            Assert.AreEqual("valid", result);   
         }
         [TestMethod]
         public void GivenMobileNumber_WhenAnalyze_ShouldReturnValid()
@@ -35,15 +35,15 @@ namespace TestProject1
             string mobile = "91 9135624879";
             Validation validation = new Validation();
             string result = validation.ValidateMobile(mobile);
-            Assert.AreEqual(result, "valid");
+            Assert.AreEqual("valid", result);
         }
         [TestMethod]
         public void GivenPassword_WhenAnalyze_ShouldReturnValid()
         {
-            string pass = "Abcdefg2023";
+            string pass = "Abcdef@2023";
             Validation validation = new Validation();
             string result = validation.ValidatePass(pass);
-            Assert.AreEqual(result, "valid");
+            Assert.AreEqual( "valid", result);
         }
     }
 }
