@@ -40,7 +40,7 @@ namespace TestProject1
         [TestMethod]
         public void GivenPassword_WhenAnalyze_ShouldReturnValid()
         {
-            string pass = "Abcdef2023";
+            string pass = "Abcdefg2023";
             Validation validation = new Validation();
             string result = validation.ValidatePass(pass);
             Assert.AreEqual(result, "valid");
