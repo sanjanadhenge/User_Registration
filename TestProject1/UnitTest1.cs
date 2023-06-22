@@ -29,5 +29,13 @@ namespace TestProject1
             string result = validation.ValidateMailID(mail);
             Assert.AreEqual(result, "valid");
         }
+        [TestMethod]
+        public void GivenMobileNumber_WhenAnalyze_ShouldReturnValid()
+        {
+            string mobile = "91 9135624879";
+            Validation validation = new Validation();
+            string result = validation.ValidateMobile(mobile);
+            Assert.AreEqual(result, "valid");
+        }
     }
 }
